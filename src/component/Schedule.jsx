@@ -1,5 +1,4 @@
 import React from "react";
-import TiTle from "./Title.jsx";
 
 const Schedule = () => {
   return (
