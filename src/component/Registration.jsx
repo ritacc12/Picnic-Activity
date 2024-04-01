@@ -1,6 +1,4 @@
 import React from "react";
-import Title from "./Title.jsx";
-import { useForm } from "react-hook-form";
 import { useState } from "react";
 
 const Registration = () => {
@@ -67,17 +65,23 @@ const Registration = () => {
   return (
     <div
       id="registration"
-      className="mx-auto h-dvh bg-[#BEC738] px-10 py-4 sm:py-4 lg:px-8 "
+      className="isolate h-dvh bg-[#BEC738] flex flex-col pt-12"
     >
-      <Title title="活動報名" subtitle="REGISTRATION"></Title>
-      <p className="text-black mt-4"> *一人限報名一個場次</p>
-      <div className="w-96 flex flex-col justify-center mx-auto mt-8 ">
+      <h2 className="font-semibold text-3xl text-[#434a1d]">活動報名</h2>
+      <h3 className="font-semibold text-2xl text-[#50571d]">
+        ACTIVITY REGISTRATION
+      </h3>
+      <p className="text-[#50571d] mt-4 font-bold"> *一人限報名一個場次</p>
+      <div className=" flex flex-col justify-center mx-auto mt-8">
         {submitted ? (
           <div className="success-message font-extrabold text-black text-4xl">
             Successful!
           </div>
         ) : (
-          <form onSubmit={handleSubmit}>
+          <form
+            onSubmit={handleSubmit}
+            className="mx-auto flex flex-col justify-center"
+          >
             <div>
               <label className="input input-bordered flex items-center gap-2 bg-zinc-300 ">
                 <svg
@@ -133,7 +137,7 @@ const Registration = () => {
 
             <div className="form-control my-8">
               <div>
-                <legend className="text-left text-black font-semibold mb-4">
+                <legend className="text-left  font-semibold mb-4">
                   報名活動：
                 </legend>
                 <div>
@@ -147,10 +151,7 @@ const Registration = () => {
                       checked={selectedValue === "SoothYoga"}
                       onChange={() => handleRadioChange("SoothYoga")}
                     />
-                    <label
-                      htmlFor="舒緩瑜珈"
-                      className="text-amber-950 mx-6 font-medium"
-                    >
+                    <label htmlFor="舒緩瑜珈" className="mx-6 font-semibold">
                       舒緩瑜珈
                     </label>
                   </div>
@@ -165,10 +166,7 @@ const Registration = () => {
                       checked={selectedValue === "HathaYoga"}
                       onChange={() => handleRadioChange("HathaYoga")}
                     />
-                    <label
-                      htmlFor="哈達瑜珈"
-                      className="text-amber-950 mx-6 font-medium"
-                    >
+                    <label htmlFor="哈達瑜珈" className=" mx-6 font-semibold">
                       哈達瑜珈
                     </label>
                   </div>
@@ -183,10 +181,7 @@ const Registration = () => {
                       checked={selectedValue === "AerobicBoxing"}
                       onChange={() => handleRadioChange("AerobicBoxing")}
                     />
-                    <label
-                      htmlFor="有氧拳擊"
-                      className="text-amber-950 mx-6 font-medium"
-                    >
+                    <label htmlFor="有氧拳擊" className="mx-6 font-semibold">
                       有氧拳擊
                     </label>
                   </div>
@@ -195,7 +190,7 @@ const Registration = () => {
             </div>
 
             <button
-              className="rounded-full bg-orange-400 cursor-pointer my-4 w-72 shadow-lg"
+              className="rounded-full bg-[#f5a342] cursor-pointer w-72 shadow-lg font-semibold my-4"
               disabled={!isFormValid}
               type="submit"
             >
