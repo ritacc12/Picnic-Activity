@@ -20,7 +20,7 @@ const Registration = () => {
     });
   };
 
-  // For Radio button
+  // For Radio button only can choose one choice
   const [selectedValue, setSelectedValue] = useState("SoothYoga");
 
   const handleRadioChange = (value) => {
@@ -39,6 +39,11 @@ const Registration = () => {
     // Validate email
     if (!formData.email) {
       newErrors.email = "Email is required";
+      isValid = false;
+    } else if (
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(formData.email)
+    ) {
+      newErrors.email = "Email type error";
       isValid = false;
     }
 
@@ -67,23 +72,30 @@ const Registration = () => {
       id="registration"
       className="isolate h-dvh bg-[#BEC738] flex flex-col pt-12"
     >
-      <h2 className="font-semibold text-3xl text-[#434a1d]">活動報名</h2>
-      <h3 className="font-semibold text-2xl text-[#50571d]">
+      <h2 className="font-semibold text-3xl text-[#23280b]">活動報名</h2>
+      <h3 className="font-semibold text-2xl text-[#434a1d]">
         ACTIVITY REGISTRATION
       </h3>
-      <p className="text-[#50571d] mt-4 font-bold"> *一人限報名一個場次</p>
+      <p className="text-[#434a1d] mt-3 font-bold"> *一人限報名一個場次</p>
       <div className=" flex flex-col justify-center mx-auto mt-8">
         {submitted ? (
-          <div className="success-message font-extrabold text-black text-4xl">
-            Successful!
-          </div>
+          <>
+            <div className="success-message font-extrabold text-white text-4xl">
+              Successful
+              <p className="font-bold pt-2">已成功報名</p>
+            </div>
+            <p className="text-[#50571d] mt-4 font-bold">
+              If you need to register for other activities, please refresh your
+              browser
+            </p>
+          </>
         ) : (
           <form
             onSubmit={handleSubmit}
             className="mx-auto flex flex-col justify-center"
           >
             <div>
-              <label className="input input-bordered flex items-center gap-2 bg-zinc-300 ">
+              <label className="input input-bordered flex items-center gap-2 bg-zinc-300">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
@@ -135,9 +147,9 @@ const Registration = () => {
               )}
             </div>
 
-            <div className="form-control my-8">
-              <div>
-                <legend className="text-left  font-semibold mb-4">
+            <div className="form-control my-6">
+              <div className="text-[#23280b]">
+                <legend className="text-left font-semibold mb-4 text-lg">
                   報名活動：
                 </legend>
                 <div>
@@ -151,7 +163,10 @@ const Registration = () => {
                       checked={selectedValue === "SoothYoga"}
                       onChange={() => handleRadioChange("SoothYoga")}
                     />
-                    <label htmlFor="舒緩瑜珈" className="mx-6 font-semibold">
+                    <label
+                      htmlFor="舒緩瑜珈"
+                      className="mx-6 font-semibold text-lg"
+                    >
                       舒緩瑜珈
                     </label>
                   </div>
@@ -166,7 +181,10 @@ const Registration = () => {
                       checked={selectedValue === "HathaYoga"}
                       onChange={() => handleRadioChange("HathaYoga")}
                     />
-                    <label htmlFor="哈達瑜珈" className=" mx-6 font-semibold">
+                    <label
+                      htmlFor="哈達瑜珈"
+                      className=" mx-6 font-semibold text-lg"
+                    >
                       哈達瑜珈
                     </label>
                   </div>
@@ -181,7 +199,10 @@ const Registration = () => {
                       checked={selectedValue === "AerobicBoxing"}
                       onChange={() => handleRadioChange("AerobicBoxing")}
                     />
-                    <label htmlFor="有氧拳擊" className="mx-6 font-semibold">
+                    <label
+                      htmlFor="有氧拳擊"
+                      className="mx-6 font-semibold text-lg"
+                    >
                       有氧拳擊
                     </label>
                   </div>
@@ -190,7 +211,7 @@ const Registration = () => {
             </div>
 
             <button
-              className="rounded-full bg-[#f5a342] cursor-pointer w-72 shadow-lg font-semibold my-4"
+              className="rounded-full bg-[#f5a342] cursor-pointer w-72 shadow-lg font-semibold my-4 text-[#23280b]"
               disabled={!isFormValid}
               type="submit"
             >
