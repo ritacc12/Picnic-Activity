@@ -31,7 +31,7 @@ const Activity = () => {
               src="/pictures/Dance.jpg"
             />
             <h3 className="font-semibold text-xl my-4 text-[#242d06]">
-              跳舞表演
+              舞蹈表演
             </h3>
           </div>
           <div className="flex flex-col items-center px-2 mb-3">
