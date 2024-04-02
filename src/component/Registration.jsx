@@ -80,7 +80,7 @@ const Registration = () => {
       <div className=" flex flex-col justify-center mx-auto mt-8">
         {submitted ? (
           <>
-            <div className="success-message font-extrabold text-white text-4xl">
+            <div className="success-message font-extrabold text-[#23280b] text-4xl">
               Successful
               <p className="font-bold pt-2">已成功報名</p>
             </div>
@@ -114,7 +114,7 @@ const Registration = () => {
                 />
               </label>
               {errors.name && (
-                <div className="error text-gray-800 italic font-medium pb-4">
+                <div className="error text-red-500 italic font-medium pt-2">
                   {errors.name}
                 </div>
               )}
@@ -141,7 +141,7 @@ const Registration = () => {
                 />
               </label>
               {errors.email && (
-                <div className="error  text-gray-800 italic font-medium">
+                <div className="error text-red-500 italic font-medium pt-2">
                   {errors.email}
                 </div>
               )}
