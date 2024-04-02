@@ -95,6 +95,10 @@ export default function Navbar() {
               className="btn btn-ghost text-2xl text-[#faffe5]"
               onClick={scrollTop}
             >
+              <img
+                src="/pictures/face-smile-solid.svg"
+                className="size-7"
+              ></img>
               2024 野餐祭
             </Link>
           </div>
