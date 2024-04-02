@@ -7,11 +7,11 @@ const Traffic = () => {
         className="isolate py-4 selection:sm:py-32 lg:px-8 bg-[#D6D979] pb-8 mx-auto"
         id="traffic"
       >
-        <h2 className="font-semibold text-3xl pt-8 text-[#5d4a26]">交通資訊</h2>
+        <h2 className="font-semibold text-3xl pt-8 text-[#352813]">交通資訊</h2>
         <h3 className="font-semibold text-2xl text-[#6b5828]">
           TRAFFIC INFORMATION
         </h3>
-        <div className="flex flex-row justify-center">
+        <div className="flex flex-row justify-center text-[#352813]">
           <svg
             role="img"
             viewBox="0 0 24 24"
@@ -36,12 +36,12 @@ const Traffic = () => {
             // referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-        <ul className="list-outside mt-4">
+        <ul className="list-outside mt-4 text-[#6b5828]">
           <li className="py-1 font-bold">✦ 歡迎搭乘大眾運輸工具</li>
           <li className="py-1 font-medium ">✦ 非停車區域，切勿違規停車</li>
         </ul>
-        <div>
-          <p className="text-xl font-medium mt-8 rounded-lg bg-yellow-400 w-56 mx-auto">
+        <div className="text-[#352813]">
+          <p className="text-xl font-semibold mt-8 rounded-lg bg-yellow-400 w-56 mx-auto">
             捷運路線
           </p>
           <ul className="list-outside mt-4">
@@ -49,7 +49,7 @@ const Traffic = () => {
           </ul>
         </div>
 
-        <div>
+        <div className="text-[#352813]">
           <p className="text-xl font-medium mt-8 rounded-lg bg-yellow-400 w-56 mx-auto">
             公車路線
           </p>
@@ -59,7 +59,7 @@ const Traffic = () => {
           </ul>
         </div>
 
-        <div>
+        <div className="text-[#352813]">
           <p className="text-xl font-medium mt-8 rounded-lg bg-yellow-400 w-56 mx-auto">
             停車資訊
           </p>
