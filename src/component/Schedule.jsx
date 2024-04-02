@@ -10,7 +10,7 @@ const Schedule = () => {
         </h3>
         <div className="overflow-x-auto mx-auto flex flex-col justify-center px-10">
           <div>
-            <p className="text-xl font-medium my-6 rounded-lg bg-[#e2ed9b] w-56 mx-auto text-[#392c0f]">
+            <p className="text-xl font-semibold my-6 rounded-lg bg-[#e2ed9b] w-56 mx-auto text-[#392c0f]">
               表演活動
             </p>
             <table className="table my-4 bg-stone-50 text-black font-medium">
@@ -53,7 +53,7 @@ const Schedule = () => {
             </table>
           </div>
           <div className="mb-4">
-            <p className="text-xl font-medium my-6 rounded-lg bg-[#e2ed9b] w-56 mx-auto text-[#392c0f]">
+            <p className="text-xl font-semibold my-6 rounded-lg bg-[#e2ed9b] w-56 mx-auto text-[#392c0f]">
               體驗活動
             </p>
             <table className="table my-4 bg-stone-50 text-black font-medium">
