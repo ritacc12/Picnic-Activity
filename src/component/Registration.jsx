@@ -60,12 +60,9 @@ const Registration = () => {
       setSubmitted(true); // Set a submitted flag
     } else {
       // Form is not valid, display error messages
-      return setFormData(formData);
-      // setSubmitted(false);
+      setSubmitted(false);
     }
   };
-
-  const isFormValid = Object.keys(errors).length === 0;
 
   return (
     <div
@@ -212,7 +209,6 @@ const Registration = () => {
 
             <button
               className="rounded-full bg-[#f5a342] cursor-pointer w-72 shadow-lg font-semibold my-4 text-[#23280b]"
-              disabled={!isFormValid}
               type="submit"
             >
               Submit
