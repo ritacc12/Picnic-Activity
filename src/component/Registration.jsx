@@ -59,9 +59,6 @@ const Registration = () => {
     e.preventDefault();
 
     if (validateForm()) {
-      const selectedActivity = selectedValue; // 讀取被點擊的活動選項
-      console.log("Selected Activity:", selectedActivity);
-      // Form is valid, you can submit the data here
       console.log("Form data:", formData);
       setSubmitted(true); // Set a submitted flag
     } else {
