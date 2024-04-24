@@ -21,7 +21,7 @@ const Registration = () => {
   };
 
   // For Radio button only can choose one choice
-  const [selectedValue, setSelectedValue] = useState("SoothYoga");
+  const [selectedValue, setSelectedValue] = useState("");
   const handleRadioChange = (value) => {
     setSelectedValue(value);
 
