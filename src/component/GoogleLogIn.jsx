@@ -6,18 +6,19 @@ import googleIcon from "/pictures/google.svg";
 import axios from "axios";
 
 const GoogleLogIn = ({ setProfileState, onLoginSuccess, onLogout }) => {
-  const [user, setUser] = useState([]); //確認用戶是否登入成功
+  const [user, setUser] = useState([]); //用於存儲登入後從 Google API 獲取的用戶資訊。
   const [profile, setProfile] = useState({}); //儲存用戶資料訊息
   const [isLoggedIn, setIsLoggedIn] = useState(false); // 控制登錄狀態
 
   const login = useGoogleLogin({
     onSuccess: (codeResponse) => {
       setUser(codeResponse), onLoginSuccess(codeResponse); // 登入成功後執行回調函數
-      setIsLoggedIn(true); // 登录成功后设置状态为已登录
+      setIsLoggedIn(true); // 登入成功后设置狀態為已登录
     },
     onError: (error) => alert("Login Failed:", error),
   });
 
+  //向 Google API 發送請求以獲取用戶的詳細個人資料,並將結果存儲在 profile 狀態中。
   useEffect(() => {
     if (user) {
       axios
@@ -51,7 +52,7 @@ const GoogleLogIn = ({ setProfileState, onLoginSuccess, onLogout }) => {
       googleLogout(); // 執行登出
       setIsLoggedIn(false); //頁面重新載入時重置登錄狀態
     };
-
+    //加載時為 beforeunload 事件添加了一個addEventListener,在組件卸載時移除該addEventListener。
     window.addEventListener("beforeunload", handleReload);
 
     return () => {
