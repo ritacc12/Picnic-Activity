@@ -25,43 +25,17 @@ const Countdown = () => {
 
   return (
     <>
-      <div className="flex justify-center mt-4 mx-auto text-white">
+      <div className="flex justify-center mt-4 mx-auto text-white items-center">
         {Object.entries(timeLeft).map((element) => {
           const label = element[0];
           const value = element[1];
           return (
             <div className="box" key={label}>
-              <div className="value">
-                <span>{value}</span>
-              </div>
+              <span className="value">{value}</span>
               <span className="label"> {label} </span>
             </div>
           );
         })}
-        {/* <div className="box">
-          <span className="countdown font-mono text-4xl">
-            <span>{timeLeft.days}</span>
-          </span>
-          days
-        </div>
-        <div className="box">
-          <span className="countdown font-mono text-4xl">
-            <span>{timeLeft.hours}</span>
-          </span>
-          hours
-        </div>
-        <div className="box">
-          <span className="countdown font-mono text-4xl">
-            <span>{timeLeft.minutes}</span>
-          </span>
-          min
-        </div>
-        <div className="box">
-          <span className="countdown font-mono text-4xl">
-            <span>{timeLeft.seconds}</span>
-          </span>
-          sec
-        </div> */}
       </div>
     </>
   );
