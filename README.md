@@ -1,7 +1,7 @@
 # Picnic Activity
 
-This is a SPA project , use React x Tailwind to built a picnic activity page
-Use react-scroll to connect the specificated section, user can click button and move to specific section
+This is a SPA project, using React x Tailwind to build a picnic event page
+Use react-scroll to connect to a specific section, the user can click the button and move to a specific section and register for the event through a google account
 
 deploy via Zeabur (https://picnicactivity2024.zeabur.app/)
 
@@ -10,7 +10,7 @@ deploy via Zeabur (https://picnicactivity2024.zeabur.app/)
 - About activity
 - Activity schedule
 - Show the location
-- Sign up for a activity (validation form)
+- Sign up for a activity via Google OAuth (validation form)
 
 ## Installation
 
