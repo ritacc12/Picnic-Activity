@@ -4,7 +4,7 @@ import GoogleLogIn from "./GoogleLogIn.jsx";
 
 const Registration = () => {
   const [formData, setFormData] = useState({
-    profileState: "",
+    profileState: "", //用戶登錄狀態
     activity: "",
   });
 
@@ -80,7 +80,10 @@ const Registration = () => {
       <h3 className="font-semibold text-2xl text-[#434a1d]">
         ACTIVITY REGISTRATION
       </h3>
-      <p className="text-[#434a1d] mt-3 font-bold"> *一人限報名一個場次</p>
+      <p className="text-[#434a1d] mt-3 font-bold text-base">
+        {" "}
+        *一人限報名一個場次
+      </p>
       <div className="mx-auto mt-4">
         {submitted ? (
           <>
@@ -100,7 +103,7 @@ const Registration = () => {
             onSubmit={handleSubmit}
             className="mx-auto flex flex-col justify-center"
           >
-            <div>
+            <div className="mt-2">
               <GoogleLogIn
                 setProfileState={setFormData}
                 onLoginSuccess={handleLoginSuccess}
@@ -108,21 +111,21 @@ const Registration = () => {
               />
             </div>
             {errors.profileState && (
-              <div className="error text-red-500 font-semibold mt-4 outline-double outline-3 outline-offset-2">
+              <div className="error text-red-500 font-semibold mt-6 outline-double outline-3 outline-offset-2">
                 {errors.profileState}
               </div>
             )}
             <div className="form-control my-6">
               <div className="text-[#23280b]">
-                <legend className="text-left font-semibold  text-lg">
+                <legend className="text-center font-semibold  text-xl">
                   報名活動：
                 </legend>
 
-                <div>
-                  <div className="cursor-pointer flex justify-start mt-2">
+                <div className="flex flex-col items-center">
+                  <div className="cursor-pointer flex justify-start mt-4">
                     <input
                       type="radio"
-                      className="radio radio-warning"
+                      className="w-6"
                       id="SoothYoga"
                       name="SoothYoga"
                       value="SoothYoga"
@@ -131,7 +134,7 @@ const Registration = () => {
                     />
                     <label
                       htmlFor="舒緩瑜珈"
-                      className="mx-6 font-semibold text-lg"
+                      className="activityItem mx-6 font-semibold text-xl"
                     >
                       舒緩瑜珈
                     </label>
@@ -140,7 +143,7 @@ const Registration = () => {
                   <div className="cursor-pointer flex justify-start mt-2">
                     <input
                       type="radio"
-                      className="radio radio-warning"
+                      className="w-6"
                       id="HathaYoga"
                       name="HathaYoga"
                       value="HathaYoga"
@@ -149,7 +152,7 @@ const Registration = () => {
                     />
                     <label
                       htmlFor="哈達瑜珈"
-                      className=" mx-6 font-semibold text-lg"
+                      className="activityItem mx-6 font-semibold text-xl"
                     >
                       哈達瑜珈
                     </label>
@@ -158,7 +161,7 @@ const Registration = () => {
                   <div className="cursor-pointer flex justify-start mt-2">
                     <input
                       type="radio"
-                      className="radio radio-warning"
+                      className="w-6"
                       id="AerobicBoxing"
                       name="AerobicBoxing"
                       value="AerobicBoxing"
@@ -167,7 +170,7 @@ const Registration = () => {
                     />
                     <label
                       htmlFor="有氧拳擊"
-                      className="mx-6 font-semibold text-lg"
+                      className="activityItem mx-6 font-semibold text-xl"
                     >
                       有氧拳擊
                     </label>
@@ -181,7 +184,7 @@ const Registration = () => {
               )}
             </div>
             <button
-              className="rounded-full bg-[#f5a342] cursor-pointer w-72 shadow-lg font-bold text-[#23280b] hover:ring-2 ring-orange-200 mt-2"
+              className="rounded-full bg-[#f5a342] cursor-pointer w-72 shadow-lg font-bold text-[#23280b] hover:ring-2 ring-orange-200 mt-2 text-lg"
               type="submit"
             >
               Submit
