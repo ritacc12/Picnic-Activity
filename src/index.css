@@ -60,6 +60,12 @@ body {
 }
 
 /* Schedule */
+
+.table{
+  width: 50%;
+  margin: auto;
+}
+
 td{
   font-size: 1.125rem; /* 18px */
   line-height: 1.75rem; /* 28px */
