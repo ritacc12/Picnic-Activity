@@ -46,7 +46,7 @@ export default function Navbar() {
                     smooth={true}
                     offset={-50}
                     duration={300}
-                    className="text-white hover:bg-[#5a8308]  font-bold text-base"
+                    className="navItem text-white hover:bg-[#5a8308] font-bold"
                   >
                     關於活動
                   </Link>
@@ -58,7 +58,7 @@ export default function Navbar() {
                     smooth={true}
                     offset={-50}
                     duration={300}
-                    className="text-white hover:bg-[#5a8308]  font-bold text-base"
+                    className="navItem text-white hover:bg-[#5a8308]  font-bold"
                   >
                     活動時程
                   </Link>
@@ -70,7 +70,7 @@ export default function Navbar() {
                     smooth={true}
                     offset={-50}
                     duration={300}
-                    className="text-white hover:bg-[#5a8308]  font-bold text-base"
+                    className="navItem text-white hover:bg-[#5a8308]  font-bold"
                   >
                     交通資訊
                   </Link>
@@ -83,7 +83,7 @@ export default function Navbar() {
                     smooth={true}
                     offset={-50}
                     duration={300}
-                    className="text-white hover:bg-[#5a8308]  font-bold text-base"
+                    className="navItem text-white hover:bg-[#5a8308]  font-bold"
                   >
                     立即報名
                   </Link>
@@ -92,7 +92,7 @@ export default function Navbar() {
             </div>
             <Link
               to="/"
-              className="btn btn-ghost text-2xl text-[#faffe5]"
+              className="btn btn-ghost text-3xl text-[#faffe5]"
               onClick={scrollTop}
             >
               <img
@@ -111,7 +111,7 @@ export default function Navbar() {
                   smooth={true}
                   offset={-50}
                   duration={300}
-                  className="text-white hover:bg-[#5a8308]  font-bold text-base"
+                  className="navItem text-white hover:bg-[#5a8308]  font-bold"
                 >
                   關於活動
                 </Link>
@@ -123,7 +123,7 @@ export default function Navbar() {
                   smooth={true}
                   offset={-50}
                   duration={300}
-                  className="text-white  hover:bg-[#5a8308]  font-bold text-base"
+                  className="navItem text-white  hover:bg-[#5a8308]  font-bold "
                 >
                   活動時程
                 </Link>
@@ -136,7 +136,7 @@ export default function Navbar() {
                   smooth={true}
                   offset={-50}
                   duration={300}
-                  className="text-white hover:bg-[#5a8308]  font-bold text-base"
+                  className="navItem text-white hover:bg-[#5a8308]  font-bold"
                 >
                   交通資訊
                 </Link>
@@ -149,7 +149,7 @@ export default function Navbar() {
                   smooth={true}
                   offset={-50}
                   duration={300}
-                  className="text-white hover:bg-[#5a8308]  font-bold text-base"
+                  className="navItem text-white hover:bg-[#5a8308]  font-bold"
                 >
                   立即報名
                 </Link>
